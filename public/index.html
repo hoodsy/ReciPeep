@@ -48,15 +48,32 @@
 	</div>
 
 
-  <!-- Cook/Share buttons -->
+  <!-- Content (buttons/display) -->
 	<div class="content">
 
-		<div>
+
+	<!-- cook side -->
+		<div id="COOK-SIDE">
 			<div class="cook-btn select" ng-click="showThis(0)" ng-value="{{images[0].set}}">
 				<label>Cook. Create.</label>
 			</div>
-			<img ng-hide="!nowShowing==0" ng-src="{{images[0].url}}" class="slidedown animated bounceInUp">
+
+			<!-- all content for COOK -->
+			<div ng-hide="!nowShowing==0">
+				<img ng-src="{{images[0].url}}" class="cook slidedown animated bounceInUp">
+
+				<!-- overlaying content -->
+				<div class="cook animated bounceInRight">
+					<input type="text" placeholder="Search recipes..." class="text form-control"></input>
+					<button class="btn btn-default btns">Search</button>
+					<h1 class="cook-txt">Description Text and text and text</h1>
+				</div>
+
+			<!-- end nowShowing -->
+			</div>
+		<!-- end of COOK SIDE -->
 		</div>
+
 
 		<!-- share side -->
 		<div id="SHARE-SIDE">
@@ -65,21 +82,23 @@
 			</div>
 
 			<!-- all content for SHARE -->
-			<div class="share" ng-hide="!nowShowing==1">
+			<div ng-hide="!nowShowing==1">
 				<img ng-src="{{images[1].url}}" class="slidedown animated bounceInUp">
 
-				<!-- text boxes -->
+				<!-- overlaying content -->
 				<div class="animated bounceInLeft">
 					<input type="text" placeholder="Post here..." class="text form-control"></input>
 					<div class="btn-group btns">
 						<button class="btn btn-default">Post</button>
 						<button class="btn btn-default">Live Feed</button>
 					</div>
+					<h1 class="share-txt">Description Text and text and text</h1>
 				</div>
-				<h1 class="text2 animated bounceInLeft">Description Text and text and text</h1>
 				
+				<!-- end nowShowing -->
+			</div>
 				<!-- end of SHARE-SIDE -->
-			</div> 
+		</div> 
 
 
 <!-- end of CONTENT -->
