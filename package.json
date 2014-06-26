@@ -1,0 +1,20 @@
+{
+  "name"         : "ReciPeep",
+  "version"      : "0.0.0",
+  "description"  : "Recipe comparison and sharing site.",
+  "main"         : "server.js",
+  "author"       : "Logan Bernard",
+  "repository"   : {
+    "type": "git",
+    "url" : "https://jlbernard@bitbucket.org/jlbernard/recipeep.git"
+  },
+  "dependencies" : {
+    "express"    : "~3.4.4",
+    "mongoose"   : "~3.6.2",
+    "nodemon"	   : "~1.2.0"
+  },
+  "engines"      : {
+    "node":  "0.10.x",
+    "npm" :  "1.3.x"
+  }
+}

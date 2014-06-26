@@ -1,0 +1,121 @@
+/* COLOR SCHEME: http://www.liliesandlilacs.com/trends.html 
+#e2af38 = butterscotch
+#F7E7CE = champagne
+#66CCCC = seafoam green
+#FF7F50 = coral
+*/
+@font-face{
+  font-family: 'Junction';
+  src: url('junction.otf') format('opentype');
+}
+
+html {
+  background-color: #66CCCC;
+  font-family: 'Junction';
+}
+body {
+  background-color: #66CCCC;
+  padding-top:30px; 
+}
+.content {
+  list-style-type: none;
+  text-align: center;
+  font-size: xx-large;
+}
+.content div.select {
+  z-index: 5;
+  width:50%;
+  opacity: .6;
+  color: #F7E7CE;
+  background-color: #FF7F50;
+  -webkit-transition: all 0.9s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+   -moz-transition: all 0.9s ease-out;  /* Firefox 4-15 */
+     -o-transition: all 0.9s ease-out;  /* Opera 10.50–12.00 */
+        transition: all 0.9s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+.content div.select:hover {
+  opacity: 1;
+  cursor: pointer;
+  -webkit-transition: all 0.9s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+   -moz-transition: all 0.9s ease-out;  /* Firefox 4-15 */
+    -o-transition: all 0.9s ease-out;  /* Opera 10.50–12.00 */
+      transition: all 0.9s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */  
+}
+.content div.select[ng-value='on'] {
+  opacity: 1;
+}
+.cook-btn {
+  float:right;
+  z-index: 5;
+}
+.share-btn {
+  float:left;
+  z-index: 5;
+}
+.navbar-custom {
+  background-color: #F7E7CE;
+}
+.recipeep {
+  color: #FF7F50;
+  text-align: center;
+}
+.top-recipes {
+  width: 100%;
+  background-image: url('https://s3.amazonaws.com/ReciPeep/img/pizza.jpg');
+}
+.slidedown {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -5; /* Ensure div tag stays behind content; -999 might work, too. */
+}
+.slidedown.ng-hide-add,
+.slidedown.ng-hide-remove
+ {
+
+  opacity: 0;
+}
+.slidedown.ng-hide-remove {
+  opacity: 1;
+}
+.slidedown.ng-hide-add.ng-hide-add-active,
+.slidedown.ng-hide-add,
+.slidedown.ng-hide,
+ {
+  opacity: 0;
+}
+.slidedown.ng-hide-remove.ng-hide-remove-active{
+  z-index: -1;
+}
+.form-control {
+  background-color: black;
+  opacity: .4;
+  margin-top: 200px;
+  padding-bottom: 200px;
+  left: 40%;
+  width: 400px;
+}
+.text{
+  position: absolute;
+
+}
+.text2{
+  position: absolute;
+  margin-top: 600px;
+  right: 7%;
+  color: #999999;
+  background-color: #F7E7CE;
+  opacity: .8;
+}
+.btns {
+  position: absolute;
+  margin-top: 410px;
+  left: 40%;
+}
+.btn {
+  color: #F7E7CE;
+  background-color: #FF7F50;
+  border-color: #F7E7CE;
+}

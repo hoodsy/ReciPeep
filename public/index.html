@@ -1,0 +1,89 @@
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="ReciPeep">
+
+
+<head>
+
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	<title>ReciPeep</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" href="css/animate.min.css">
+
+	<!-- JS -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script><!-- load angular -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-animate.js"></script>
+	<script src="js/controllers/home.js"></script> <!-- load up our controller -->
+	<script src="js/services/todos.js"></script> <!-- load our todo service -->
+	<script src="js/core.js"></script> <!-- load our main application -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!-- Underscore js -->
+	<script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+
+</head>
+
+
+<!-- SET THE CONTROLLER -->
+<body ng-controller="HomeCtrl">
+
+  <!-- NAVBAR -->
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="navbar-header">
+			<a class="navbar-brand recipeep" href="#">ReciPeep</a>
+		</div>
+	</nav>
+
+
+		<!-- Top Recipe Scrolling list -->
+	<div class="top-recipes">
+		<h1>Top Recipes</h1>
+	</div>
+
+
+  <!-- Cook/Share buttons -->
+	<div class="content">
+
+		<div>
+			<div class="cook-btn select" ng-click="showThis(0)" ng-value="{{images[0].set}}">
+				<label>Cook. Create.</label>
+			</div>
+			<img ng-hide="!nowShowing==0" ng-src="{{images[0].url}}" class="slidedown animated bounceInUp">
+		</div>
+
+		<!-- share side -->
+		<div id="SHARE-SIDE">
+			<div class="share-btn select" ng-click="showThis(1)" ng-value="{{images[1].set}}">
+				<label>Share. Socialize.</label>
+			</div>
+
+			<!-- all content for SHARE -->
+			<div class="share" ng-hide="!nowShowing==1">
+				<img ng-src="{{images[1].url}}" class="slidedown animated bounceInUp">
+
+				<!-- text boxes -->
+				<div class="animated bounceInLeft">
+					<input type="text" placeholder="Post here..." class="text form-control"></input>
+					<div class="btn-group btns">
+						<button class="btn btn-default">Post</button>
+						<button class="btn btn-default">Live Feed</button>
+					</div>
+				</div>
+				<h1 class="text2 animated bounceInLeft">Description Text and text and text</h1>
+				
+				<!-- end of SHARE-SIDE -->
+			</div> 
+
+
+<!-- end of CONTENT -->
+	</div>
+
+</body>
+</html>
