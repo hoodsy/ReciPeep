@@ -15,8 +15,8 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
 
 	<!-- JS -->
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script><!-- load angular -->
@@ -25,48 +25,47 @@
 	<script src="js/services/todos.js"></script> <!-- load our todo service -->
 	<script src="js/core.js"></script> <!-- load our main application -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<!-- Underscore js -->
-	<script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
 
 </head>
 
 
 <!-- SET THE CONTROLLER -->
-<body ng-controller="HomeCtrl">
+<body ng-controller="landingPage">
 
   <!-- NAVBAR -->
 	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
 		<div class="navbar-header">
 			<a class="navbar-brand recipeep" href="#">ReciPeep</a>
 		</div>
+		<div class="navbar-right">
+			<a class="navbar-brand" href="#"><span style="color:#FF7F50">Top Recipes</span></a>
+			<a class="navbar-brand recipeep" href="#">Login</a>
+			<a class="navbar-brand recipeep" href="#">Sign Up</a>
+		</div>
 	</nav>
+	
 
-
-		<!-- Top Recipe Scrolling list -->
-	<div class="top-recipes">
-		<h1>Top Recipes</h1>
-	</div>
-
-
-  <!-- Content (buttons/display) -->
+  <!-- .CONTENT (buttons/display) -->
 	<div class="content">
 
 
-	<!-- cook side -->
-		<div id="COOK-SIDE">
-			<div class="cook-btn select" ng-click="showThis(0)" ng-value="{{images[0].set}}">
+	<!-- COOK side -->
+		<div>
+			<div class="cook-btn content-btns" ng-click="showThis(0)" ng-value="{{images[0].set}}">
 				<label>Cook. Create.</label>
 			</div>
 
-			<!-- all content for COOK -->
+			<!-- COOK image / nowShowing div -->
 			<div ng-hide="!nowShowing==0">
-				<img ng-src="{{images[0].url}}" class="cook slidedown animated bounceInUp">
+				<img ng-src="{{images[0].url}}" class="animated bounceInUp">
 
 				<!-- overlaying content -->
-				<div class="cook animated bounceInRight">
-					<input type="text" placeholder="Search recipes..." class="text form-control"></input>
-					<button class="btn btn-default btns">Search</button>
-					<h1 class="cook-txt">Description Text and text and text</h1>
+				<div class="animated bounceInRight">
+					<textarea type="text" placeholder="Search recipes..." class="search-box box"></textarea>
+					<button class="btn btn-default search-btn">Search</button>
+					<h1 class="cook-txt"><span style="color:#66CCCC">Browse</span> the most popular recipes on the web <br/>
+															 <span style="color:#66CCCC">Combine</span> favorites and construct an inventive meal
+					</h1>
 				</div>
 
 			<!-- end nowShowing -->
@@ -75,24 +74,26 @@
 		</div>
 
 
-		<!-- share side -->
-		<div id="SHARE-SIDE">
-			<div class="share-btn select" ng-click="showThis(1)" ng-value="{{images[1].set}}">
+		<!-- SHARE side -->
+		<div>
+			<div class="share-btn content-btns" ng-click="showThis(1)" ng-value="{{images[1].set}}">
 				<label>Share. Socialize.</label>
 			</div>
 
-			<!-- all content for SHARE -->
+			<!-- SHARE image / nowShowing div -->
 			<div ng-hide="!nowShowing==1">
-				<img ng-src="{{images[1].url}}" class="slidedown animated bounceInUp">
+				<img ng-src="{{images[1].url}}" class="animated bounceInUp">
 
 				<!-- overlaying content -->
 				<div class="animated bounceInLeft">
-					<input type="text" placeholder="Post here..." class="text form-control"></input>
-					<div class="btn-group btns">
+					<textarea placeholder="Post here..." class="txt-box box"></textarea>
+					<div class="btn-group custom-btn">
 						<button class="btn btn-default">Post</button>
 						<button class="btn btn-default">Live Feed</button>
 					</div>
-					<h1 class="share-txt">Description Text and text and text</h1>
+					<h1 class="cook-txt"><span style="color:#66CCCC">Discuss</span> and display the meals you create<br/>
+																<span style="color:#66CCCC">Compare</span> creations with your friends
+					</h1>
 				</div>
 				
 				<!-- end nowShowing -->
@@ -101,7 +102,7 @@
 		</div> 
 
 
-<!-- end of CONTENT -->
+<!-- end of .CONTENT -->
 	</div>
 
 </body>
