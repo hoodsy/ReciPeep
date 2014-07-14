@@ -1,5 +1,6 @@
 module.exports = {
 
 	// the database url to connect
-	url : 'mongodb://node:node@mongo.onmodulus.net:27017/uwO3mypu'
+	// connecting as user 'recipeep'
+	url : 'mongodb://recipeep:56seetheSTIX@ds053469.mongolab.com:53469/heroku_app26801907'
 }

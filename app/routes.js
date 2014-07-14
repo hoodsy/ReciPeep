@@ -1,4 +1,5 @@
 var Todo = require('./models/todo');
+var search = require('./models/search');
 
 module.exports = function(app) {
 
