@@ -1,0 +1,60 @@
+
+<!-- .CONTENT (buttons/display) -->
+<div class="content">
+
+
+<!-- COOK side -->
+	<div>
+		<div class="cook-btn content-btns" ng-click="showThis(0)" ng-value="{{images[0].set}}">
+			<label>Cook. Create.</label>
+		</div>
+
+		<!-- COOK image / nowShowing div -->
+		<div ng-hide="!nowShowing==0">
+			<img ng-src="{{images[0].url}}" class="animated bounceInUp">
+
+			<!-- overlaying content -->
+			<div class="animated bounceInRight">
+				<input ng-model="recipe" ng-init="recipe='Search here...'" class="search-box box"></input>
+				<a href="/recipes" ng-click="searchRecipes(recipe)" class="btn btn-default search-btn">Search</a>
+				<h1 class="floating-txt"><span style="color:#66CCCC">Browse</span> the web's most popular recipes<br/>
+														 <span style="color:#66CCCC">Combine</span> favorites and construct meals
+				</h1>
+			</div>
+
+		<!-- end nowShowing -->
+		</div>
+	<!-- end of COOK SIDE -->
+	</div>
+
+
+	<!-- SHARE side -->
+	<div>
+		<div class="share-btn content-btns" ng-click="showThis(1)" ng-value="{{images[1].set}}">
+			<label>Share. Socialize.</label>
+		</div>
+
+		<!-- SHARE image / nowShowing div -->
+		<div ng-hide="!nowShowing==1">
+			<img ng-src="{{images[1].url}}" class="animated bounceInUp">
+
+			<!-- overlaying content -->
+			<div class="animated bounceInLeft">
+				<textarea type="search" ng-model="search" ng-init="search='Post here...'" class="txt-box box"></textarea>
+				<div class="btn-group cook-btn-grp">
+					<a class="btn btn-default">Post</a>
+					<a class="btn btn-default">Live Feed</a>
+				</div>
+				<h1 class="floating-txt"><span style="color:#66CCCC">Discuss</span> and display the meals you create<br/>
+															<span style="color:#66CCCC">Compare</span> creations with your friends
+				</h1>
+			</div>
+			
+			<!-- end nowShowing -->
+		</div>
+			<!-- end of SHARE-SIDE -->
+	</div> 
+
+
+<!-- end of .CONTENT -->
+</div>
