@@ -4,11 +4,15 @@ angular.module('appRoutes',['ngRoute'])
     $routeProvider.
       when('/', {
         templateUrl: 'views/homeContent.html',
-        controller: 'landingPage'
+        controller: 'homeController'
       }).
       when('/recipes', {
         templateUrl: 'views/recipes.html',
-        controller: 'landingPage'
+        controller: 'recipeController'
+      }).
+      when('/meal', {
+        templateUrl: 'views/meal.html',
+        controller: 'mealController'
       }).
       otherwise({
         redirectTo: '/'

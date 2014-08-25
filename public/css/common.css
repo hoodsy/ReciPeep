@@ -14,17 +14,29 @@ html {
 }
 body {
   background-color: #66CCCC;
-  padding-top:30px;
   font-family: 'Junction'; 
+}
+input {
+  border: none;
 }
 .navbar-custom {
   background-color: #F7E7CE;
 }
+.nav-margin {
+  margin-top: 1%;
+  margin-right: 2%;
+  white-space: nowrap;
+}
+.navbar-header {
+  display: inline-block;
+  float: left;
+}
 .recipeep {
-  color: #FF7F50;
   text-align: center;
-  margin-left: 20px;
-  margin-right: 20px;
+  font-size: 1.3em;
+  margin-left: .5%;
+  margin-right: 2%;
+  color: #FF7F50;
 }
 /*
 .content: buttons and images
@@ -87,18 +99,24 @@ textarea {
   color: #F7E7CE;  
   padding-top: 10px;
   opacity: .85;
-  margin-top: 150px;
   background-color: black;
   padding-left: 5px;
   position: absolute;
-  width: 400px;
-  left: 40%;
+  width: 300px;
 }
 .txt-box {
   height: 130px;
+  left: 40%;
+  margin-top: 150px;
 }
 .search-box {
   height: 45px;
+  left: 40%;
+  margin-top: 150px;
+}
+.search-box2 {
+  height: 45px;
+  left: 60%;
 }
 .floating-txt {
   font-style: italic;
@@ -120,6 +138,14 @@ textarea {
   margin-top: 195px;
   left: 40%;
 }
+.search-btn2 {
+  position: absolute;
+  margin-top: 45px;
+  left: 60%;
+}
+.search-grp {
+  margin-top: 3%;
+}
 .btn {
   color: #F7E7CE;
   background-color: #FF7F50;
@@ -127,12 +153,10 @@ textarea {
 }
 .recipe-detail-btn {
   float: right;
-  margin-bottom: 4px;
 }
 .recipe-add-btn {
-  display: inline-block;
   margin-bottom: 4px;
-  margin-left: 8px;
+  float: right;
 }
 .close-btn {
   float: right;
@@ -155,64 +179,255 @@ textarea {
     -o-animation-delay: .3s;  /* Opera 10.30–12.00 */
       animation-delay: .3s;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */    
 }
-.card-list{
-  float: left;
-  margin-top: 20px;
-}
+
+
+/*RECIPE PAGE*/
 .recipe-card{
   background-color: rgba(255, 255, 255, 0.8);
-  margin-left: 10px;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-top: 30px;
   border-radius: 10px;
   border-style: outset;
   border-width: 4px;
-  /*border-color: #e2af38; */
-  width: 380px;
-  height: 400px;
-  position: relative;
+    -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+
 }
-.recipe-card:hover {
-  box-shadow: 0 0 0 4px #e2af38;
- }
 .recipe-card img{
-  padding-bottom: 4px;
+  padding-bottom: 8px;
   padding-top: 8px;
+  padding-right: 4px;
 }
 .card-inner{
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding: 4px;
 }
 li {
   list-style-type: none;
 }
 .recipe-name {
-  width: 360px;
-  font-weight: 600;
+  width: 320px;
   background-color:rgba(0,0,0,0);
+  font-size: 120%;
 }
 .recipe-descript {
   float: left;
   padding-left: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-right: 50%;
 }
 .meal-bar {
   background-color: rgba(0, 0, 0, 0.8);
-  /*float: right;*/
   margin-left: 90%;
+  margin-top: -3%;
   width: 10%;
-  height: 900px;
   color: #F7E7CE;
-  padding-top: 3%;
   position: fixed;
 }
-.display-detail {
+@media only screen and (max-width: 600px) {
+  .meal-bar {
+    width: 90%;
+    background-color: rgba(0, 255, 255, 0.8);
+  }
+}
+.meal-bar-inner {
+  padding-left: 4px;
+}
+.current-meal{
+  border-bottom: 4px solid #FF7F50;
+  text-align: center;
+  letter-spacing: 1.5px;
+  margin-top: 20%;
+}
+.cook-meal-btn {
+  text-align: center;
+  width: 100%; 
+  margin-bottom: 10%;
+}
+.added-list {
+  padding-top: 15px;
+  padding-bottom: 8px;
+  text-align: center;
+}
+.recipe-checked {
+  padding-left: 12px;
+  color: #32CD32;
+  font-size: 2em;
+}
+.recipe-rm {
+  padding-right: 4px;
+  color: #CC3333;
+  font-size: 2em;
+  float: left;
+}
+.recipe-rm:hover {
+  cursor: pointer;
+}
+/*.hide-meal {
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-left: 88%;
+  margin-top: -3%;
+  width: 2%;
+  height: 100%;
+  color: #F7E7CE;
   position: fixed;
-  margin-left: 35%;
-  margin-top: 10%;
-  opacity: .6;
-  background-color: #F7E7CE;
-  color: #FF7F50;
+  border-right: 1px solid rgba(200, 200, 200, 0.8);
+} 
+.hide-bar {
+  margin-top:1100%; 
+  font-size:2em; 
+  padding-right:4px;
+}*/
+.source-link {
+  vertical-align: -14px;
+}
+#columns {
+    -moz-column-count: 3;
+    -moz-column-gap: 10px;
+    -moz-column-fill: auto;
+    -webkit-column-count: 3;
+    -webkit-column-gap: 10px;
+    -webkit-column-fill: auto;
+    column-count: 3;
+    column-gap: 15px;
+    column-fill: auto;
+    position: absolute;
+    margin-top: 6%;
+    margin-bottom: 2%;
+}
+
+/*@media (min-width: 960px) {
+  #columns {
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+  }
+}
+@media (min-width: 1100px) {
+  #columns {
+    -webkit-column-count: 5;
+    -moz-column-count: 5;
+    column-count: 5;
+  }
+}*/
+
+
+/*HOVER ANIMATIONS*/
+/* Glow */
+.glow {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.glow:hover, .glow:focus, .glow:active {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+/* Float Shadow */
+.float-shadow {
+  display: inline-block;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.float-shadow:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+}
+.float-shadow:hover, .float-shadow:focus, .float-shadow:active {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  /* move the element up by 5px */
+}
+.float-shadow:hover:before, .float-shadow:focus:before, .float-shadow:active:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+}
+
+/* Hover Shadow */
+@-webkit-keyframes hover {
+  50% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes hover {
+  50% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+}
+
+@-webkit-keyframes hover-shadow {
+  0% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+    opacity: .4;
+  }
+
+  50% {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+    opacity: .4;
+  }
+}
+
+@keyframes hover-shadow {
+  0% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+    opacity: .4;
+  }
+
+  50% {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+    opacity: .4;
+  }
 }

@@ -15,13 +15,12 @@
 
 			<!-- overlaying content -->
 			<div class="animated bounceInRight">
-				<input ng-model="recipe" ng-init="recipe='Search here...'" class="search-box box"></input>
-				<a href="/recipes" ng-click="searchRecipes(recipe)" class="btn btn-default search-btn">Search</a>
+				<input enter="searchRecipes(recipe)" ng-model="recipe" placeholder="Search here..." class="search-box box form-control"></input>
+				<a enter href="/recipes" ng-click="searchRecipes(recipe)" class="btn btn-default search-btn">Search</a>
 				<h1 class="floating-txt"><span style="color:#66CCCC">Browse</span> the web's most popular recipes<br/>
 														 <span style="color:#66CCCC">Combine</span> favorites and construct meals
 				</h1>
 			</div>
-
 		<!-- end nowShowing -->
 		</div>
 	<!-- end of COOK SIDE -->
@@ -40,7 +39,7 @@
 
 			<!-- overlaying content -->
 			<div class="animated bounceInLeft">
-				<textarea type="search" ng-model="search" ng-init="search='Post here...'" class="txt-box box"></textarea>
+				<textarea type="search" ng-model="search" placeholder="Search here..." class="txt-box box"></textarea>
 				<div class="btn-group cook-btn-grp">
 					<a class="btn btn-default">Post</a>
 					<a class="btn btn-default">Live Feed</a>
@@ -49,12 +48,10 @@
 															<span style="color:#66CCCC">Compare</span> creations with your friends
 				</h1>
 			</div>
-			
 			<!-- end nowShowing -->
 		</div>
 			<!-- end of SHARE-SIDE -->
 	</div> 
-
 
 <!-- end of .CONTENT -->
 </div>

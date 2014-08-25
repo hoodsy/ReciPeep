@@ -1,58 +1,62 @@
 
 
 <div>
+<!-- <h3 ng-click="$spMenu.toggle()">TOGGLE</h3> -->
+
+<!-- <div id='sp-page'> -->
 <!-- Description Text -->
 	<div class="recipe-descript">
-	<h1>Search results for <span style="color:#F7E7CE;font-weight:bold;">{{yummly.recipe}}</span>.</h1>
-	<p ng-bind-html="yummly.searchData.attribution.html"></p>	
+		<h1>Search results for <span style="color:#F7E7CE;font-weight:bold;">{{yummly.recipe}}</span>.</h1>
+		<p ng-bind-html="yummly.searchData.attribution.html"></p>
 	</div>
 
-<!-- Meal Bucket -->
-	<div class="meal-bar">
-		<p>Current Meal</p>
-		<p>selected item</p>
-
+<!-- Search Bar -->
+	<div class="search-grp">
+		<input enter="searchRecipes(recipe)" ng-model="recipe" placeholder="Search here..." class="search-box2 box form-control glow"></input>
+		<a href="/recipes" ng-click="searchRecipes(recipe)" class="btn btn-default search-btn2">Search</a>
 	</div>
 
-	<!-- LIST OF SEARCH RESULTS -->
-	<div class="container-fluid">
-	<ul>
-		<li class="card-list" ng-repeat="recipe in yummly.searchData.matches">
-			<div class="recipe-card">
+	<!-- Recipe-Card Columns -->
+	<div class="container-fluid card-list">
+		<div id="columns">
+			<div ng-repeat="recipe in yummly.searchData.matches" class="recipe-card glow" ng-init='getRecipe(recipe.id)'>
+			<!-- Card-Inner -->
 				<div class="card-inner">
-				<p class="recipe-name" ng-init='getRecipe(recipe.id)'>{{yummly.getData[$index].name}}</p>
-				
-				<!-- Button+picture+source link -->
+				<p class="recipe-name">{{yummly.getData[$index].name}}</p>
+
 				<p><span style="font-style:italic">Cook Time:</span> {{yummly.getData[$index].totalTime}}</p>
 
-				<a target="_blank" href="{{yummly.getData[$index].source.sourceRecipeUrl}}" class="btn btn-default recipe-detail-btn">Instructions & Nutrition</a>
+				<a target="_blank" href="{{yummly.getData[$index].source.sourceRecipeUrl}}" class="btn btn-default recipe-detail-btn float-shadow">Instructions & Nutrition</a>
 
 				<p><span style="font-style:italic">Ingredients:</span> {{yummly.getData[$index].ingredientLines.length}}</p>
 
 				<img ng-src="{{yummly.getData[$index].images.0.hostedLargeUrl}}">
 
-				<a target="_blank" class="source-link" href="{{yummly.getData[$index].source.sourceRecipeUrl}}"><br>{{yummly.getData[$index].source.sourceDisplayName}}<span style="float:right;font-weight:bold;color:#FF7F50;">{{recipe.rating}}/5</span></a>
+				<a target="_blank" class="source-link" href="{{yummly.getData[$index].source.sourceRecipeUrl}}"><br>{{yummly.getData[$index].source.sourceDisplayName}}<span style="margin-left:6px;color:#FF7F50;">{{recipe.rating}}/5</span><i ng-hide="!(yummly.meal.indexOf(yummly.getData[$index]) > -1)" class="recipe-checked glyphicon glyphicon-ok"></i></a>
 
-				<a href="/recipes" ng-click="searchRecipes(recipe)" class="btn btn-default recipe-add-btn">Add to Meal</a>
+				<a href="/recipes" ng-click="addRecipe(yummly.getData[$index])" class="btn btn-default recipe-add-btn float-shadow">Add to Meal</a>
 				</div>
+			<!-- end Card-Inner -->
 			</div>
-		</li>
-	</ul>
+		</div>
 	</div>
+<!-- </div> -->
 
-
-<!-- 	 Instruction/Cook Time POP-UP 
-	<div class="display-detail animated fadeIn" ng-hide="yummly.details.show==0">
-		<a ng-click="hideDetails()" class="close-btn">
-	  	<span class="glyphicon glyphicon-remove"></span>
-		</a>
-		<h1>{{yummly.details.recipe.name}}</h1>
-		<img ng-src="{{yummly.details.recipe.images.0.hostedLargeUrl}}">
-		<p>Cook Time: {{yummly.details.recipe.totalTime}}</p>
-		<li ng-repeat="ingredient in yummly.details.recipe.ingredientLines">ingredient</li>
-		<p>View cooking instructions at:</p>
-		<a class="source-link" href="{{yummly.details.recipe.source.sourceRecipeUrl}}">{{yummly.details.recipe.source.sourceDisplayName}}
+<!-- <div id='sp-nav'> -->
+<!-- Meal Bar -->
+<!-- 	<div ng-click="toggleBar()" class="hide-meal">
+	<i class="hide-bar glyphicon glyphicon-chevron-left"></i>
 	</div> -->
-
-	
+	<div class="meal-bar">
+		<h3 class="current-meal">Current Meal</h3>
+		<ul class="meal-bar-inner">
+			<li class="added-list" ng-repeat="recipe in yummly.meal" >
+				<i class="recipe-rm glyphicon glyphicon-remove" ng-click="removeRecipe(recipe)"></i>
+				<a target="_blank" href="{{recipe.source.sourceRecipeUrl}}" class="added-recipe">{{recipe.name}}</a>
+			</li>
+		</ul>
+		<p style="text-align:center">Click to continue.</p>
+		<p ng-click="toMeal()" class="btn btn-default cook-meal-btn float-shadow">Cook Meal</p>
+	</div>
+<!-- </div> -->
 </div>
