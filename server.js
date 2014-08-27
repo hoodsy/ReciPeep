@@ -4,10 +4,10 @@ var express  = require('express');
 var app      = express(); 								// create our app w/ express
 var mongoose = require('mongoose'); 					// mongoose for mongodb
 var port  	 = process.env.PORT || 8080; 				// set the port
-var database = require('./config/database'); 			// load the database config
+// var database = require('./config/database'); 			// load the database config
 
 // configuration ===============================================================
-mongoose.connect(database.url); 	// connect to mongoDB database via MongoLab
+// mongoose.connect(database.url); 	// connect to mongoDB database via MongoLab
 
 app.configure(function() {
 	app.use(express.static(__dirname + '/public')); 		// set the static files location /public/img will be /img for users
