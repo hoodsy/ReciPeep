@@ -15,6 +15,7 @@ html {
 body {
   background-color: #66CCCC;
   font-family: 'Junction'; 
+  overflow-x: hidden; 
 }
 input {
   border: none;
@@ -23,9 +24,12 @@ input {
   background-color: #F7E7CE;
 }
 .nav-margin {
-  margin-top: 1%;
+  margin-top: .5%;
   margin-right: 2%;
   white-space: nowrap;
+}
+.navbar {
+  margin-bottom: 0px;
 }
 .navbar-header {
   display: inline-block;
@@ -115,8 +119,7 @@ textarea {
   margin-top: 150px;
 }
 .search-box2 {
-  height: 45px;
-  left: 60%;
+  margin-top: 8px;
 }
 .floating-txt {
   font-style: italic;
@@ -136,12 +139,13 @@ textarea {
 .search-btn {
   position: absolute;
   margin-top: 195px;
-  left: 40%;
+  left: 43%;
 }
 .search-btn2 {
   position: absolute;
-  margin-top: 45px;
-  left: 60%;
+  margin-top: 11px;
+  margin-left: 259px;
+  border: none;
 }
 .search-grp {
   margin-top: 3%;
@@ -218,10 +222,10 @@ li {
 .meal-bar {
   background-color: rgba(0, 0, 0, 0.8);
   margin-left: 90%;
-  margin-top: -3%;
   width: 10%;
   color: #F7E7CE;
   position: fixed;
+  border-radius: 4px;
 }
 @media only screen and (max-width: 600px) {
   .meal-bar {
@@ -291,24 +295,25 @@ li {
     column-gap: 15px;
     column-fill: auto;
     position: absolute;
-    margin-top: 6%;
+    margin-top: 8%;
     margin-bottom: 2%;
 }
 
-/*@media (min-width: 960px) {
+/*@media (min-width: 900px) {
+  #columns {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+}
+@media (min-width: 1300px) {
   #columns {
     -webkit-column-count: 4;
     -moz-column-count: 4;
     column-count: 4;
   }
-}
-@media (min-width: 1100px) {
-  #columns {
-    -webkit-column-count: 5;
-    -moz-column-count: 5;
-    column-count: 5;
-  }
 }*/
+
 
 
 /*HOVER ANIMATIONS*/

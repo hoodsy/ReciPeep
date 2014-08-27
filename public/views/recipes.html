@@ -1,19 +1,25 @@
+  <!-- NAVBAR -->
+<nav class="navbar navbar-custom " role="navigation">
+	<div class="navbar-header">
+		<a class="navbar-brand recipeep" href="/">ReciPeep</a>
+	</div>
+	<div id="nav-search">
+		<input enter="searchRecipes(recipe)" ng-model="recipe" placeholder="Search recipes..." class="search-box2 box form-control glow"></input>
+		<a href="/recipes" ng-click="searchRecipes(recipe)" class="btn btn-default search-btn2 glyphicon glyphicon-search"></a>
+	</div>
+	<div class="navbar-right nav-margin">
+		<a class="recipeep" href="">Login</a>
+		<p style="display:inline;" class="recipeep">|</p>
+		<a class="recipeep" href="">Sign Up</a>
+	</div>
+</nav>
 
-
-<div>
-<!-- <h3 ng-click="$spMenu.toggle()">TOGGLE</h3> -->
-
-<!-- <div id='sp-page'> -->
 <!-- Description Text -->
 	<div class="recipe-descript">
 		<h1>Search results for <span style="color:#F7E7CE;font-weight:bold;">{{yummly.recipe}}</span>.</h1>
 		<p ng-bind-html="yummly.searchData.attribution.html"></p>
 	</div>
 
-<!-- Search Bar -->
-	<div class="search-grp">
-		<input enter="searchRecipes(recipe)" ng-model="recipe" placeholder="Search here..." class="search-box2 box form-control glow"></input>
-		<a href="/recipes" ng-click="searchRecipes(recipe)" class="btn btn-default search-btn2">Search</a>
 	</div>
 
 	<!-- Recipe-Card Columns -->
@@ -40,9 +46,7 @@
 			</div>
 		</div>
 	</div>
-<!-- </div> -->
 
-<!-- <div id='sp-nav'> -->
 <!-- Meal Bar -->
 <!-- 	<div ng-click="toggleBar()" class="hide-meal">
 	<i class="hide-bar glyphicon glyphicon-chevron-left"></i>
@@ -58,5 +62,3 @@
 		<p style="text-align:center">Click to continue.</p>
 		<p ng-click="toMeal()" class="btn btn-default cook-meal-btn float-shadow">Cook Meal</p>
 	</div>
-<!-- </div> -->
-</div>

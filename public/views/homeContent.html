@@ -1,4 +1,14 @@
-
+  <!-- NAVBAR -->
+<nav class="navbar navbar-custom " role="navigation">
+	<div class="navbar-header">
+		<a class="navbar-brand recipeep" href="/">ReciPeep</a>
+	</div>
+	<div class="navbar-right nav-margin">
+		<a class="recipeep" href="">Login</a>
+		<p style="display:inline;" class="recipeep">|</p>
+		<a class="recipeep" href="">Sign Up</a>
+	</div>
+</nav>
 <!-- .CONTENT (buttons/display) -->
 <div class="content">
 
@@ -15,8 +25,16 @@
 
 			<!-- overlaying content -->
 			<div class="animated bounceInRight">
-				<input enter="searchRecipes(recipe)" ng-model="recipe" placeholder="Search here..." class="search-box box form-control"></input>
-				<a enter href="/recipes" ng-click="searchRecipes(recipe)" class="btn btn-default search-btn">Search</a>
+		<div id="nav-search" class="search-btn">
+		<input enter="searchRecipes(recipe)" ng-model="recipe" placeholder="Search recipes..." class="search-box2 box form-control glow"></input>
+		<a href="/recipes" ng-click="searchRecipes(recipe)" class="btn btn-default search-btn2 glyphicon glyphicon-search"></a>
+	</div>
+
+
+<!-- 				<input enter="searchRecipes(recipe)" ng-model="recipe" placeholder="Search here..." class="search-box box form-control"></input>
+				<a enter href="/recipes" ng-click="searchRecipes(recipe)" class="btn btn-default search-btn">Search</a> -->
+
+
 				<h1 class="floating-txt"><span style="color:#66CCCC">Browse</span> the web's most popular recipes<br/>
 														 <span style="color:#66CCCC">Combine</span> favorites and construct meals
 				</h1>
@@ -39,7 +57,7 @@
 
 			<!-- overlaying content -->
 			<div class="animated bounceInLeft">
-				<textarea type="search" ng-model="search" placeholder="Search here..." class="txt-box box"></textarea>
+				<textarea type="search" ng-model="search" placeholder="Share meals..." class="txt-box box"></textarea>
 				<div class="btn-group cook-btn-grp">
 					<a class="btn btn-default">Post</a>
 					<a class="btn btn-default">Live Feed</a>
