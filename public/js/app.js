@@ -6,7 +6,7 @@ angular.module('ReciPeep', [
 	'Meal',
 	// Dependencies / Plugins
 	'ngAnimate', 'ngRoute', 'ngSanitize',
-	'shoppinpal.mobile-menu',
+	// 'shoppinpal.mobile-menu',
 	// Services
 	'YummlyAPI',
 	// Directives
