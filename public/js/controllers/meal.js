@@ -22,13 +22,4 @@ angular.module('Meal', ['YummlyAPI', 'ngSanitize'])
 			yummly.meal.splice(index, 1);
 		}
 	}
-	// $scope.toggleBar = function() {
-	// 	if ($scope.mealBar == 1){
-	// 		$scope.mealBar = 0;
-	// 	}
-	// 	else {
-	// 		$scope.mealBar = 1;
-	// 	}
-	// }
-
 }]);
